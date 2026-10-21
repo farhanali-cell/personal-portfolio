@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Download } from "lucide-react";
+import { Eye } from "lucide-react";
 import ProfileOrbit from "../ui/ProfileOrbit";
 
 export default function Home({ setActiveSection }) {
@@ -44,25 +44,26 @@ export default function Home({ setActiveSection }) {
           <button
             onClick={() => setActiveSection("projects")}
             className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-white text-black text-sm font-medium
-                             hover:bg-gray-200 transition-all duration-300"
+            hover:bg-gray-200 transition-all duration-300 cursor-pointer"
           >
             View Projects
           </button>
           <button
             onClick={() => setActiveSection("contact")}
             className="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-white/20 text-white text-sm font-medium
-                             hover:bg-white/5 transition-all duration-300"
+            hover:bg-white/5 transition-all duration-300 cursor-pointer"
           >
             Let's Talk
           </button>
           <a
             href="/Farhan_Ali_CV.pdf"
-            download
+            target="_blank"
+            rel="noreferrer"
             className="w-full sm:w-auto px-5 py-2.5 rounded-xl border border-white/20 text-white text-sm font-medium
-                       hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2"
+            hover:bg-white/5 transition-all duration-300 flex items-center justify-center gap-2"
           >
-            <Download size={16} />
-            Download CV
+            <Eye size={16} />
+            Preview CV
           </a>
         </motion.div>
       </div>
