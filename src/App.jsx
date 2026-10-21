@@ -8,12 +8,14 @@ import Projects from "./components/sections/Projects";
 import Skills from "./components/sections/Skills";
 import About from "./components/sections/About";
 import Contact from "./components/sections/Contact";
+import Services from "./components/sections/Services";
 
 const sections = {
   home: Home,
   about: About,
   projects: Projects,
   skills: Skills,
+  services: Services,
   contact: Contact,
 };
 
@@ -36,6 +38,12 @@ const THEMES = {
     ridge: 0xf472b6,
     particle: 0xf9a8d4,
     glow: 0x9d174d,
+  },
+  services: {
+    wire: 0x22c55e,
+    ridge: 0x4ade80,
+    particle: 0x86efac,
+    glow: 0x15803d,
   },
   contact: {
     wire: 0xeab308,

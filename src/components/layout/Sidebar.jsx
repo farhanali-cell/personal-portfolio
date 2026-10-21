@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Home, User, FolderKanban, Code2, Mail, Menu, X } from "lucide-react";
+import {
+  Home,
+  User,
+  FolderKanban,
+  Code2,
+  Briefcase,
+  Mail,
+  Menu,
+  X,
+} from "lucide-react";
 import profilePic from "../../assets/profile.jpg";
 
 function GithubIcon(props) {
@@ -54,6 +63,7 @@ const navItems = [
   { label: "About", icon: User },
   { label: "Projects", icon: FolderKanban },
   { label: "Skills", icon: Code2 },
+  { label: "Services", icon: Briefcase },
   { label: "Contact", icon: Mail },
 ];
 
@@ -83,7 +93,7 @@ function NavList({ activeSection, onSelect }) {
         const isActive = activeSection === item.label.toLowerCase();
         return (
           <button
-            key={item.id}
+            key={item.label}
             onClick={() => onSelect(item.label.toLowerCase())}
             className={`group flex items-center justify-between px-3 py-2.5 rounded-xl
                         text-sm transition-all duration-300
